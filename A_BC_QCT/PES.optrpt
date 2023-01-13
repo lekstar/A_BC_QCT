@@ -1,0 +1,240 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: ??$fabs@_N$0A@@@YAN_N@Z
+
+DEAD STATIC FUNC: ??0NNet@@QEAA@XZ
+
+DEAD STATIC FUNC: ??1NNet@@QEAA@XZ
+
+DEAD STATIC FUNC: ??__Enet1@@YAXXZ
+
+DEAD STATIC FUNC: ?time@@YA_JQEA_J@Z
+
+DEAD STATIC FUNC: _vfprintf_l
+
+DEAD STATIC FUNC: _vfscanf_l
+
+COMPILE FUNC: __local_stdio_printf_options
+
+COMPILE FUNC: printf
+   -> llvm.va_start PES.cpp (959,0)
+   -> EXTERN: __acrt_iob_func PES.cpp (960,0)
+   -> INLINE: _vfprintf_l PES.cpp (960,0) (-14960<=487)
+      -> __local_stdio_printf_options PES.cpp (645,0)
+      -> EXTERN: __stdio_common_vfprintf PES.cpp (645,0)
+   -> llvm.va_end PES.cpp (961,0)
+
+COMPILE FUNC: __local_stdio_scanf_options
+
+COMPILE FUNC: fscanf
+   -> llvm.va_start PES.cpp (1209,0)
+   -> INLINE: _vfscanf_l PES.cpp (1210,0) (-14960<=487)
+      -> __local_stdio_scanf_options PES.cpp (1065,0)
+      -> EXTERN: __stdio_common_vfscanf PES.cpp (1065,0)
+   -> llvm.va_end PES.cpp (1211,0)
+
+COMPILE FUNC: ?frac_N@@YANH@Z
+
+COMPILE FUNC: ?init_U@@YAHXZ
+
+COMPILE FUNC: ?U_dist@@YANPEAN@Z
+   -> EXTERN: ?is_init@NNet@@QEAAHXZ PES.cpp (517,0)
+   -> llvm.exp.f64 PES.cpp (523,0)
+   -> llvm.exp.f64 PES.cpp (524,0)
+   -> llvm.exp.f64 PES.cpp (524,0)
+   -> llvm.exp.f64 PES.cpp (525,0)
+   -> EXTERN: ?out@NNet@@QEAAHPEAN0@Z PES.cpp (528,0)
+   -> INLINE: ?frac_N@@YANH@Z PES.cpp (539,0) (40<=225)
+
+COMPILE FUNC: ?U_properties@@YAHXZ
+   -> ?U_dist@@YANPEAN@Z PES.cpp (205,0) (310>225)
+   -> printf PES.cpp (254,0)
+   -> ?U_dist@@YANPEAN@Z PES.cpp (215,0) (310>225)
+   -> ?U_dist@@YANPEAN@Z PES.cpp (218,0) (310>225)
+   -> ?U_dist@@YANPEAN@Z PES.cpp (221,0) (310>225)
+   -> INLINE: ??$fabs@_N$0A@@@YAN_N@Z PES.cpp (225,0) (-15030<=337)
+   -> llvm.copysign.f64 PES.cpp (225,0)
+   -> llvm.fabs.f64 PES.cpp (228,0)
+
+COMPILE FUNC: ?init_U@@YAHPEAD@Z
+   -> EXTERN: fopen PES.cpp (82,0)
+   -> EXTERN: fopen PES.cpp (84,0)
+   -> printf PES.cpp (85,0)
+   -> fscanf PES.cpp (94,0)
+   -> fscanf PES.cpp (97,0)
+   -> fscanf PES.cpp (100,0)
+   -> fscanf PES.cpp (103,0)
+   -> EXTERN: memcmp PES.cpp (104,0)
+   -> fscanf PES.cpp (109,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z PES.cpp (115,0)
+   -> INLINE: ??0NNet@@QEAA@XZ PES.cpp (115,0) (-15<=337)
+   -> EXTERN: calloc PES.cpp (117,0)
+   -> EXTERN: malloc PES.cpp (118,0)
+   -> EXTERN: malloc PES.cpp (119,0)
+   -> EXTERN: malloc PES.cpp (120,0)
+   -> fscanf PES.cpp (123,0)
+   -> EXTERN: malloc PES.cpp (128,0)
+   -> fscanf PES.cpp (131,0)
+   -> EXTERN: malloc PES.cpp (145,0)
+   -> fscanf PES.cpp (148,0)
+   -> EXTERN: malloc PES.cpp (153,0)
+   -> fscanf PES.cpp (156,0)
+   -> EXTERN: ?init_net@NNet@@QEAAXHPEBHPEBN1@Z PES.cpp (161,0)
+   -> EXTERN: free PES.cpp (165,0)
+   -> EXTERN: free PES.cpp (166,0)
+   -> EXTERN: free PES.cpp (167,0)
+   -> EXTERN: free PES.cpp (170,0)
+   -> EXTERN: free PES.cpp (171,0)
+   -> EXTERN: free PES.cpp (172,0)
+   -> EXTERN: free PES.cpp (173,0)
+   -> fscanf PES.cpp (175,0)
+   -> fscanf PES.cpp (176,0)
+   -> fscanf PES.cpp (178,0)
+   -> fscanf PES.cpp (180,0)
+   -> fscanf PES.cpp (182,0)
+   -> ?U_properties@@YAHXZ PES.cpp (190,0) (485>45 [EE:45>45])
+   -> EXTERN: fclose PES.cpp (193,0)
+
+COMPILE FUNC: ?bound_states@@YAHNNHHHHPEAH@Z
+   -> EXTERN: calloc PES.cpp (283,0)
+   -> EXTERN: calloc PES.cpp (284,0)
+   -> EXTERN: calloc PES.cpp (285,0)
+   -> EXTERN: calloc PES.cpp (286,0)
+   -> EXTERN: calloc PES.cpp (287,0)
+   -> EXTERN: calloc PES.cpp (288,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z PES.cpp (290,0) (-14995<=487)
+      -> EXTERN: _time64 PES.cpp (522,0)
+   -> ?U_dist@@YANPEAN@Z PES.cpp (394,0) (310>225)
+   -> EXTERN: LAPACKE_dgetrf PES.cpp (408,0)
+   -> EXTERN: LAPACKE_dgetri PES.cpp (410,0)
+   -> EXTERN: cblas_dgemm PES.cpp (417,0)
+   -> EXTERN: LAPACKE_dsyev PES.cpp (424,0)
+   -> EXTERN: malloc PES.cpp (444,0)
+   -> EXTERN: calloc PES.cpp (445,0)
+   -> EXTERN: calloc PES.cpp (447,0)
+   -> EXTERN: realloc PES.cpp (452,0)
+   -> EXTERN: free PES.cpp (473,0)
+   -> EXTERN: free PES.cpp (474,0)
+   -> EXTERN: free PES.cpp (475,0)
+   -> EXTERN: free PES.cpp (476,0)
+   -> EXTERN: free PES.cpp (477,0)
+   -> EXTERN: free PES.cpp (478,0)
+
+COMPILE FUNC: ?calc_rovib_levels@@YAHXZ
+   -> ?bound_states@@YAHNNHHHHPEAH@Z PES.cpp (490,0) (1720>225 [EE:565>562])
+
+COMPILE FUNC: ?deinit_U@@YAHXZ
+   -> EXTERN: ?delete_net@NNet@@QEAAXXZ PES.cpp (507,0)
+   -> INLINE: ??1NNet@@QEAA@XZ PES.cpp (509,0) (35<=225)
+      -> EXTERN: ?delete_net@NNet@@QEAAXXZ PES.cpp (29,0)
+      -> EXTERN: __std_terminate PES.cpp (29,0)
+   -> EXTERN: ??_V@YAXPEAX@Z PES.cpp (509,0)
+
+COMPILE FUNC: ?U_grad_dist@@YANPEAN0@Z
+   -> EXTERN: ?is_init@NNet@@QEAAHXZ PES.cpp (545,0)
+   -> llvm.exp.f64 PES.cpp (551,0)
+   -> llvm.exp.f64 PES.cpp (552,0)
+   -> llvm.exp.f64 PES.cpp (552,0)
+   -> llvm.exp.f64 PES.cpp (553,0)
+   -> EXTERN: ?grad_input@NNet@@QEAAHPEAN00@Z PES.cpp (559,0)
+   -> llvm.exp.f64 PES.cpp (566,0)
+   -> llvm.exp.f64 PES.cpp (567,0)
+   -> INLINE: ?frac_N@@YANH@Z PES.cpp (574,0) (40<=225)
+   -> INLINE: ?frac_N@@YANH@Z PES.cpp (575,0) (40<=225)
+
+COMPILE FUNC: ?U_grad_hess_dist@@YANPEAN00@Z
+   -> EXTERN: ?is_init@NNet@@QEAAHXZ PES.cpp (581,0)
+   -> llvm.exp.f64 PES.cpp (593,0)
+   -> llvm.exp.f64 PES.cpp (594,0)
+   -> llvm.exp.f64 PES.cpp (594,0)
+   -> llvm.exp.f64 PES.cpp (595,0)
+   -> EXTERN: ?hess_grad_input@NNet@@QEAAHPEAN000@Z PES.cpp (600,0)
+   -> llvm.exp.f64 PES.cpp (607,0)
+   -> llvm.exp.f64 PES.cpp (608,0)
+   -> llvm.exp.f64 PES.cpp (611,0)
+   -> llvm.exp.f64 PES.cpp (611,0)
+   -> llvm.exp.f64 PES.cpp (612,0)
+   -> llvm.exp.f64 PES.cpp (612,0)
+   -> llvm.exp.f64 PES.cpp (618,0)
+   -> llvm.exp.f64 PES.cpp (620,0)
+   -> INLINE: ?frac_N@@YANH@Z PES.cpp (628,0) (40<=225)
+   -> INLINE: ?frac_N@@YANH@Z PES.cpp (630,0) (40<=225)
+   -> INLINE: ?frac_N@@YANH@Z PES.cpp (631,0) (40<=225)
+
+COMPILE FUNC: ?IJ@@YAHHHPEAH0@Z
+   -> EXTERN: puts PES.cpp (789,0)
+   -> EXTERN: puts PES.cpp (794,0)
+   -> EXTERN: puts PES.cpp (799,0)
+
+COMPILE FUNC: ?U_cart@@YANPEAN@Z
+   -> EXTERN: calloc PES.cpp (642,0)
+   -> INLINE: ?IJ@@YAHHHPEAH0@Z PES.cpp (645,0) (85<=225)
+      -> DELETE: puts PES.cpp (789,0)
+      -> DELETE: puts PES.cpp (794,0)
+      -> DELETE: puts PES.cpp (799,0)
+   -> llvm.sqrt.f64 PES.cpp (651,0)
+   -> ?U_dist@@YANPEAN@Z PES.cpp (654,0) (325>225)
+   -> EXTERN: free PES.cpp (656,0)
+
+COMPILE FUNC: ?IJK@@YAHHHH@Z
+   -> INLINE: ?IJ@@YAHHHPEAH0@Z PES.cpp (820,0) (145<=225)
+      -> EXTERN: puts PES.cpp (789,0)
+      -> EXTERN: puts PES.cpp (794,0)
+      -> EXTERN: puts PES.cpp (799,0)
+
+COMPILE FUNC: ?U_grad_cart@@YANPEAN0@Z
+   -> EXTERN: calloc PES.cpp (668,0)
+   -> INLINE: ?IJ@@YAHHHPEAH0@Z PES.cpp (672,0) (85<=225)
+      -> DELETE: puts PES.cpp (789,0)
+      -> DELETE: puts PES.cpp (794,0)
+      -> DELETE: puts PES.cpp (799,0)
+   -> llvm.sqrt.f64 PES.cpp (678,0)
+   -> ?U_grad_dist@@YANPEAN0@Z PES.cpp (681,0) (585>225 [EE:580>562])
+   -> INLINE: ?IJK@@YAHHHH@Z PES.cpp (690,0) (145<=225)
+      -> INLINE: ?IJ@@YAHHHPEAH0@Z PES.cpp (820,0) (145<=225)
+         -> DELETE: puts PES.cpp (789,0)
+         -> DELETE: puts PES.cpp (794,0)
+         -> DELETE: puts PES.cpp (799,0)
+   -> EXTERN: free PES.cpp (696,0)
+
+COMPILE FUNC: ?U_grad_hess_cart@@YANPEAN00@Z
+   -> EXTERN: calloc PES.cpp (708,0)
+   -> EXTERN: calloc PES.cpp (710,0)
+   -> EXTERN: calloc PES.cpp (711,0)
+   -> EXTERN: calloc PES.cpp (712,0)
+   -> INLINE: ?IJ@@YAHHHPEAH0@Z PES.cpp (715,0) (85<=225)
+      -> DELETE: puts PES.cpp (789,0)
+      -> DELETE: puts PES.cpp (794,0)
+      -> EXTERN: puts PES.cpp (799,0)
+   -> llvm.sqrt.f64 PES.cpp (721,0)
+   -> INLINE: ?IJK@@YAHHHH@Z PES.cpp (728,0) (145<=225)
+      -> INLINE: ?IJ@@YAHHHPEAH0@Z PES.cpp (820,0) (145<=225)
+         -> DELETE: puts PES.cpp (789,0)
+         -> DELETE: puts PES.cpp (794,0)
+         -> DELETE: puts PES.cpp (799,0)
+   -> INLINE: ?IJ@@YAHHHPEAH0@Z PES.cpp (736,0) (85<=225)
+      -> DELETE: puts PES.cpp (789,0)
+      -> DELETE: puts PES.cpp (794,0)
+      -> DELETE: puts PES.cpp (799,0)
+   -> ?U_grad_hess_dist@@YANPEAN00@Z PES.cpp (754,0) (1095>225 [EE:565>562])
+   -> EXTERN: free PES.cpp (777,0)
+   -> EXTERN: free PES.cpp (778,0)
+   -> EXTERN: free PES.cpp (779,0)
+   -> EXTERN: free PES.cpp (780,0)
+
+COMPILE FUNC: ??__Fnet1@@YAXXZ
+   -> INLINE: ??1NNet@@QEAA@XZ PES.cpp (45,0) (-14965<=225)
+      -> EXTERN: ?delete_net@NNet@@QEAAXXZ PES.cpp (29,0)
+      -> EXTERN: __std_terminate PES.cpp (29,0)
+
+COMPILE FUNC: _GLOBAL__sub_I_PES.cpp
+   -> INLINE: ??__Enet1@@YAXXZ PES.cpp (-14975<=337)
+      -> INLINE: ??0NNet@@QEAA@XZ PES.cpp (-15015<=337)
+      -> EXTERN: atexit PES.cpp
+
+---- End Inlining Report ------

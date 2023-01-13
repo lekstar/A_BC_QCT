@@ -1,0 +1,62 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: ?time@@YA_JQEA_J@Z
+
+DEAD STATIC FUNC: _vfprintf_l
+
+COMPILE FUNC: __local_stdio_printf_options
+
+COMPILE FUNC: printf
+   -> llvm.va_start TISE1D_sol.cpp (959,0)
+   -> EXTERN: __acrt_iob_func TISE1D_sol.cpp (960,0)
+   -> INLINE: _vfprintf_l TISE1D_sol.cpp (960,0) (-14960<=487)
+      -> __local_stdio_printf_options TISE1D_sol.cpp (645,0)
+      -> EXTERN: __stdio_common_vfprintf TISE1D_sol.cpp (645,0)
+   -> llvm.va_end TISE1D_sol.cpp (961,0)
+
+COMPILE FUNC: ?TISE1D_sol@@YAHPEANNNHHNH@Z
+   -> EXTERN: calloc TISE1D_sol.cpp (23,0)
+   -> EXTERN: calloc TISE1D_sol.cpp (24,0)
+   -> EXTERN: calloc TISE1D_sol.cpp (25,0)
+   -> EXTERN: calloc TISE1D_sol.cpp (26,0)
+   -> EXTERN: calloc TISE1D_sol.cpp (27,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (29,0) (5<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (133,0) (5<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> printf TISE1D_sol.cpp (133,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (135,0) (5<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> EXTERN: LAPACKE_dgetrf TISE1D_sol.cpp (137,0)
+   -> EXTERN: LAPACKE_dgetri TISE1D_sol.cpp (139,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (141,0) (5<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> printf TISE1D_sol.cpp (141,0)
+   -> EXTERN: puts TISE1D_sol.cpp (143,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (144,0) (5<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> EXTERN: cblas_dgemm TISE1D_sol.cpp (146,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (148,0) (5<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> printf TISE1D_sol.cpp (148,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (150,0) (5<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> EXTERN: puts TISE1D_sol.cpp (151,0)
+   -> EXTERN: LAPACKE_dsyev TISE1D_sol.cpp (154,0)
+   -> INLINE: ?time@@YA_JQEA_J@Z TISE1D_sol.cpp (156,0) (-14995<=487)
+      -> EXTERN: _time64 TISE1D_sol.cpp (522,0)
+   -> printf TISE1D_sol.cpp (156,0)
+   -> llvm.fabs.f64 TISE1D_sol.cpp (161,0)
+   -> printf TISE1D_sol.cpp (161,0)
+   -> EXTERN: free TISE1D_sol.cpp (174,0)
+   -> EXTERN: free TISE1D_sol.cpp (175,0)
+   -> EXTERN: free TISE1D_sol.cpp (176,0)
+   -> EXTERN: free TISE1D_sol.cpp (177,0)
+   -> EXTERN: free TISE1D_sol.cpp (178,0)
+
+---- End Inlining Report ------

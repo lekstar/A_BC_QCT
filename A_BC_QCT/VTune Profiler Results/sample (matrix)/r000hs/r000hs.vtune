@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+ <rdmgr>
+  <timestamp type="u64_t">1647615398</timestamp>
+  <hostname>nntpat131-51</hostname>
+  <os>windows</os>
+  <product>Intel® VTune™ Profiler 2022.3.0 pre-release</product>
+  <buildNumber type="s32_t">623758</buildNumber>
+  <logicalCPUCount type="s32_t">20</logicalCPUCount>
+  <physicalCoreCount type="s32_t">12</physicalCoreCount>
+  <processorPackageCount type="s32_t">1</processorPackageCount>
+  <CPUFrequency type="s64_t">3610000000</CPUFrequency>
+  <CPUFamily type="s32_t">6</CPUFamily>
+  <CPUModel type="s32_t">151</CPUModel>
+  <CPUStepping type="s32_t">2</CPUStepping>
+  <CPUBrandName>12th Gen Intel(R) Core(TM) i7-12700K</CPUBrandName>
+  <isa>avx2</isa>
+  <collectionTimeBegin type="u64_t">1647615398</collectionTimeBegin>
+  <collectionTimeEnd type="u64_t">1647615407</collectionTimeEnd>
+  <variables>
+   <at>hs</at>
+  </variables>
+ </rdmgr>
+</root>

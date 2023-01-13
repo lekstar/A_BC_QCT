@@ -1,0 +1,35 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: _vfprintf_l
+
+COMPILE FUNC: __local_stdio_printf_options
+
+COMPILE FUNC: printf
+   -> llvm.va_start A_BC_QCT.cpp (959,0)
+   -> EXTERN: __acrt_iob_func A_BC_QCT.cpp (960,0)
+   -> INLINE: _vfprintf_l A_BC_QCT.cpp (960,0) (-14960<=487)
+      -> __local_stdio_printf_options A_BC_QCT.cpp (645,0)
+      -> EXTERN: __stdio_common_vfprintf A_BC_QCT.cpp (645,0)
+   -> llvm.va_end A_BC_QCT.cpp (961,0)
+
+COMPILE FUNC: main
+   -> EXTERN: __acrt_iob_func A_BC_QCT.cpp (14,0)
+   -> EXTERN: setbuf A_BC_QCT.cpp (14,0)
+   -> llvm.memcpy.p0i8.p0i8.i64 A_BC_QCT.cpp (27,0)
+   -> EXTERN: ?init_U@@YAHPEAD@Z A_BC_QCT.cpp (28,0)
+   -> printf A_BC_QCT.cpp (28,0)
+   -> EXTERN: ?mysrand@@YAHXZ A_BC_QCT.cpp (34,0)
+   -> printf A_BC_QCT.cpp (42,0)
+   -> EXTERN: ?calc_rovib_levels@@YAHXZ A_BC_QCT.cpp (44,0)
+   -> printf A_BC_QCT.cpp (46,0)
+   -> EXTERN: putchar A_BC_QCT.cpp (51,0)
+   -> printf A_BC_QCT.cpp (50,0)
+   -> EXTERN: ?deinit_U@@YAHXZ A_BC_QCT.cpp (161,0)
+   -> EXTERN: __kmpc_end A_BC_QCT.cpp
+
+---- End Inlining Report ------

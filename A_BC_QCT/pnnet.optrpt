@@ -1,0 +1,109 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+COMPILE FUNC: ?init_laylink@NNet@@QEAAXHPEBH@Z
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (6,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (6,0)
+
+COMPILE FUNC: ?init_weight@NNet@@QEAAHPEBN@Z
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (19,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (19,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (24,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (24,0)
+
+COMPILE FUNC: ?init_bias@NNet@@QEAAHPEBN@Z
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (43,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (43,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (46,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (46,0)
+
+COMPILE FUNC: ?init_Sij@NNet@@QEAAHXZ
+
+COMPILE FUNC: ?init_net@NNet@@QEAAXHPEBHPEBN1@Z
+   -> INLINE: ?init_laylink@NNet@@QEAAXHPEBH@Z pnnet.cpp (97,0) (50<=225)
+      -> llvm.umul.with.overflow.i64 pnnet.cpp (6,0)
+      -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (6,0)
+   -> ?init_weight@NNet@@QEAAHPEBN@Z pnnet.cpp (98,0) (250>225)
+   -> INLINE: ?init_bias@NNet@@QEAAHPEBN@Z pnnet.cpp (99,0) (190<=225)
+      -> llvm.umul.with.overflow.i64 pnnet.cpp (43,0)
+      -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (43,0)
+      -> llvm.umul.with.overflow.i64 pnnet.cpp (46,0)
+      -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (46,0)
+
+COMPILE FUNC: ?is_init@NNet@@QEAAHXZ
+
+COMPILE FUNC: ?delete_net@NNet@@QEAAXXZ
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (115,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (117,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (120,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (121,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (141,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (152,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (154,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (161,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (162,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (190,0)
+
+COMPILE FUNC: ?out@NNet@@QEAAHPEAN0@Z
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (203,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (203,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (207,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (207,0)
+   -> EXTERN: cblas_dgemv pnnet.cpp (220,0)
+   -> EXTERN: tanh pnnet.cpp (232,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (239,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (240,0)
+
+COMPILE FUNC: ?grad_input@NNet@@QEAAHPEAN00@Z
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (252,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (252,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (260,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (260,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (269,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (269,0)
+   -> DELETE: llvm.umul.with.overflow.i64 pnnet.cpp (272,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (272,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (274,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (274,0)
+   -> EXTERN: cblas_dgemv pnnet.cpp (286,0)
+   -> EXTERN: tanh pnnet.cpp (298,0)
+   -> EXTERN: cblas_dgemv pnnet.cpp (314,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (333,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (334,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (338,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (339,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (341,0)
+
+COMPILE FUNC: ?hess_grad_input@NNet@@QEAAHPEAN000@Z
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (354,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (354,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (357,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (357,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (362,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (362,0)
+   -> DELETE: llvm.umul.with.overflow.i64 pnnet.cpp (365,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (365,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (367,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (367,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (371,0)
+   -> DELETE: llvm.umul.with.overflow.i64 pnnet.cpp (374,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (374,0)
+   -> llvm.umul.with.overflow.i64 pnnet.cpp (376,0)
+   -> EXTERN: ??_U@YAPEAX_K@Z pnnet.cpp (376,0)
+   -> EXTERN: cblas_dgemv pnnet.cpp (387,0)
+   -> EXTERN: tanh pnnet.cpp (399,0)
+   -> EXTERN: cblas_dgemv pnnet.cpp (417,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (463,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (464,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (466,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (469,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (470,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (474,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (475,0)
+   -> EXTERN: ??_V@YAXPEAX@Z pnnet.cpp (477,0)
+
+---- End Inlining Report ------

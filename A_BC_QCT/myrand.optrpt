@@ -1,0 +1,16 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: ?time@@YA_JQEA_J@Z
+
+COMPILE FUNC: ?mysrand@@YAHXZ
+   -> INLINE: ?time@@YA_JQEA_J@Z myrand.cpp (6,0) (-14995<=487)
+      -> EXTERN: _time64 myrand.cpp (522,0)
+
+COMPILE FUNC: ?myrand@@YANXZ
+
+---- End Inlining Report ------

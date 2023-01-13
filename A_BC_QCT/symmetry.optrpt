@@ -1,0 +1,588 @@
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: _vfprintf_l
+
+DEAD STATIC FUNC: _vfscanf_l
+
+DEAD STATIC FUNC: _vsnprintf_l
+
+DEAD STATIC FUNC: _vsprintf_l
+
+DEAD STATIC FUNC: rank_symmetric_axes
+
+DEAD STATIC FUNC: rank_symmetric_improper_axes
+
+DEAD STATIC FUNC: rank_symmetric_inversion_centers
+
+DEAD STATIC FUNC: rank_symmetric_planes
+
+COMPILE FUNC: __local_stdio_printf_options
+
+COMPILE FUNC: sprintf
+   -> llvm.va_start symmetry.c (1774,0)
+   -> INLINE: _vsprintf_l symmetry.c (1776,0) (-14940<=487)
+      -> INLINE: _vsnprintf_l symmetry.c (1459,0) (-14945<=487)
+         -> __local_stdio_printf_options symmetry.c (1392,0)
+         -> EXTERN: __stdio_common_vsprintf symmetry.c (1392,0)
+   -> llvm.va_end symmetry.c (1778,0)
+
+COMPILE FUNC: ldexpf
+   -> llvm.ldexp.f64 symmetry.c (706,0)
+
+COMPILE FUNC: fprintf
+   -> llvm.va_start symmetry.c (840,0)
+   -> INLINE: _vfprintf_l symmetry.c (841,0) (40<=487)
+      -> __local_stdio_printf_options symmetry.c (645,0)
+      -> EXTERN: __stdio_common_vfprintf symmetry.c (645,0)
+   -> llvm.va_end symmetry.c (842,0)
+
+COMPILE FUNC: printf
+   -> llvm.va_start symmetry.c (959,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (960,0)
+   -> INLINE: _vfprintf_l symmetry.c (960,0) (-14960<=487)
+      -> __local_stdio_printf_options symmetry.c (645,0)
+      -> EXTERN: __stdio_common_vfprintf symmetry.c (645,0)
+   -> llvm.va_end symmetry.c (961,0)
+
+COMPILE FUNC: __local_stdio_scanf_options
+
+COMPILE FUNC: fscanf
+   -> llvm.va_start symmetry.c (1209,0)
+   -> INLINE: _vfscanf_l symmetry.c (1210,0) (-14960<=487)
+      -> __local_stdio_scanf_options symmetry.c (1065,0)
+      -> EXTERN: __stdio_common_vfscanf symmetry.c (1065,0)
+   -> llvm.va_end symmetry.c (1211,0)
+
+COMPILE FUNC: true
+
+COMPILE FUNC: pow2
+
+COMPILE FUNC: establish_pairs
+   -> EXTERN: calloc symmetry.c (201,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (206,0)
+   -> EXTERN: fwrite symmetry.c (206,0)
+   -> EXTERN: exit symmetry.c (207,0)
+   -> printf symmetry.c (211,0)
+   ->  symmetry.c (212,0)
+   -> printf symmetry.c (213,0)
+   -> INLINE: pow2 symmetry.c (221,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (223,0)
+   -> printf symmetry.c (224,0)
+   -> printf symmetry.c (232,0)
+   -> EXTERN: free symmetry.c (233,0)
+   -> printf symmetry.c (238,0)
+   -> EXTERN: free symmetry.c (241,0)
+
+COMPILE FUNC: rotate_reflect_atom
+   -> llvm.sin.f64 symmetry.c (1105,0)
+   -> llvm.cos.f64 symmetry.c (1106,0)
+
+COMPILE FUNC: check_transform_order
+   -> printf symmetry.c (261,0)
+   -> printf symmetry.c (269,0)
+   -> printf symmetry.c (275,0)
+
+COMPILE FUNC: same_transform
+
+COMPILE FUNC: alloc_symmetry_element
+   -> EXTERN: calloc symmetry.c (310,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (314,0)
+   -> EXTERN: fwrite symmetry.c (314,0)
+   -> EXTERN: exit symmetry.c (315,0)
+   -> EXTERN: calloc symmetry.c (317,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (319,0)
+   -> EXTERN: fwrite symmetry.c (319,0)
+   -> EXTERN: exit symmetry.c (320,0)
+
+COMPILE FUNC: destroy_symmetry_element
+   -> EXTERN: free symmetry.c (333,0)
+   -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: check_transform_quality
+   ->  symmetry.c (347,0)
+   -> INLINE: pow2 symmetry.c (349,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (351,0)
+   -> printf symmetry.c (353,0)
+
+COMPILE FUNC: eval_optimization_target_function
+   -> llvm.sqrt.f64 symmetry.c (373,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (375,0)
+   -> EXTERN: fwrite symmetry.c (375,0)
+   -> EXTERN: exit symmetry.c (376,0)
+   -> llvm.sqrt.f64 symmetry.c (392,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (394,0)
+   -> EXTERN: fwrite symmetry.c (394,0)
+   -> EXTERN: exit symmetry.c (395,0)
+   ->  symmetry.c (402,0)
+   -> INLINE: pow2 symmetry.c (405,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (412,0)
+
+COMPILE FUNC: get_params
+   -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (421,0)
+
+COMPILE FUNC: set_params
+   -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (427,0)
+
+COMPILE FUNC: optimize_transformation_params
+   -> EXTERN: __acrt_iob_func symmetry.c (445,0)
+   -> EXTERN: fwrite symmetry.c (445,0)
+   -> EXTERN: exit symmetry.c (446,0)
+   -> eval_optimization_target_function symmetry.c (451,0) (620>225 [EE:585>562])
+   -> printf symmetry.c (453,0)
+   -> EXTERN: puts symmetry.c (455,0)
+   -> llvm.fabs.f64 symmetry.c (459,0)
+   -> EXTERN: puts symmetry.c (463,0)
+   -> INLINE: get_params symmetry.c (467,0) (-25<=337)
+      -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (421,0)
+   -> INLINE: set_params symmetry.c (470,0) (-25<=337)
+      -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (427,0)
+   -> eval_optimization_target_function symmetry.c (471,0) (600>225 [EE:565>562])
+   -> INLINE: set_params symmetry.c (473,0) (-25<=337)
+      -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (427,0)
+   -> eval_optimization_target_function symmetry.c (474,0) (600>225 [EE:565>562])
+   -> printf symmetry.c (478,0)
+   -> llvm.sqrt.f64 symmetry.c (488,0)
+   -> INLINE: set_params symmetry.c (498,0) (-25<=337)
+      -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (427,0)
+   -> eval_optimization_target_function symmetry.c (499,0) (600>225 [EE:565>562])
+   -> INLINE: set_params symmetry.c (506,0) (-25<=337)
+      -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (427,0)
+   -> INLINE: set_params symmetry.c (512,0) (-25<=337)
+      -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (427,0)
+   -> eval_optimization_target_function symmetry.c (513,0) (600>225 [EE:565>562])
+   -> printf symmetry.c (514,0)
+   -> printf symmetry.c (519,0)
+   -> printf symmetry.c (523,0)
+   -> INLINE: set_params symmetry.c (539,0) (-25<=337)
+      -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (427,0)
+   -> eval_optimization_target_function symmetry.c (542,0) (600>225 [EE:565>562])
+   -> EXTERN: puts symmetry.c (546,0)
+   -> printf symmetry.c (547,0)
+
+COMPILE FUNC: refine_symmetry_element
+   -> establish_pairs symmetry.c (557,0) (825>225 [EE:600>562])
+   -> EXTERN: puts symmetry.c (559,0)
+   -> INLINE: same_transform symmetry.c (563,0) (125<=225)
+   -> printf symmetry.c (565,0)
+   -> INLINE: same_transform symmetry.c (570,0) (125<=225)
+   -> printf symmetry.c (572,0)
+   -> INLINE: same_transform symmetry.c (577,0) (125<=225)
+   -> printf symmetry.c (579,0)
+   -> INLINE: same_transform symmetry.c (584,0) (125<=225)
+   -> printf symmetry.c (586,0)
+   -> check_transform_order symmetry.c (590,0) (345>225)
+   -> EXTERN: puts symmetry.c (592,0)
+   -> optimize_transformation_params symmetry.c (595,0) (1885>225 [EE:570>562])
+   -> INLINE: check_transform_quality symmetry.c (596,0) (180<=225)
+      ->  symmetry.c (347,0)
+      -> INLINE: pow2 symmetry.c (349,0) (-30<=337)
+      -> llvm.sqrt.f64 symmetry.c (351,0)
+      -> printf symmetry.c (353,0)
+   -> EXTERN: puts symmetry.c (598,0)
+
+COMPILE FUNC: mirror_atom
+
+COMPILE FUNC: init_mirror_plane
+   -> alloc_symmetry_element symmetry.c (627,0) (355>225)
+   -> printf symmetry.c (631,0)
+   -> llvm.sqrt.f64 symmetry.c (641,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (643,0)
+   -> fprintf symmetry.c (643,0)
+   -> EXTERN: exit symmetry.c (644,0)
+   -> printf symmetry.c (657,0)
+   -> refine_symmetry_element symmetry.c (658,0) (1640>225 [EE:575>562])
+   -> EXTERN: puts symmetry.c (659,0)
+   -> INLINE: destroy_symmetry_element symmetry.c (660,0) (60<=225)
+      -> EXTERN: free symmetry.c (333,0)
+      -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: init_ultimate_plane
+   -> alloc_symmetry_element symmetry.c (669,0) (355>225)
+   -> EXTERN: puts symmetry.c (676,0)
+   -> llvm.sqrt.f64 symmetry.c (690,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (714,0)
+   -> fprintf symmetry.c (714,0)
+   -> EXTERN: exit symmetry.c (715,0)
+   -> llvm.sqrt.f64 symmetry.c (719,0)
+   -> refine_symmetry_element symmetry.c (734,0) (1530>225 [EE:585>562])
+   -> EXTERN: puts symmetry.c (735,0)
+   -> INLINE: destroy_symmetry_element symmetry.c (736,0) (60<=225)
+      -> EXTERN: free symmetry.c (333,0)
+      -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: invert_atom
+
+COMPILE FUNC: init_inversion_center
+   -> alloc_symmetry_element symmetry.c (758,0) (355>225)
+   -> EXTERN: puts symmetry.c (762,0)
+   -> llvm.sqrt.f64 symmetry.c (769,0)
+   -> printf symmetry.c (780,0)
+   -> refine_symmetry_element symmetry.c (781,0) (1640>225 [EE:575>562])
+   -> EXTERN: puts symmetry.c (782,0)
+   -> INLINE: destroy_symmetry_element symmetry.c (783,0) (60<=225)
+      -> EXTERN: free symmetry.c (333,0)
+      -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: rotate_atom
+   -> llvm.sin.f64 symmetry.c (797,0)
+   -> llvm.cos.f64 symmetry.c (798,0)
+
+COMPILE FUNC: init_ultimate_axis
+   -> alloc_symmetry_element symmetry.c (827,0) (355>225)
+   -> EXTERN: puts symmetry.c (832,0)
+   -> INLINE: pow2 symmetry.c (851,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (852,0)
+   -> INLINE: pow2 symmetry.c (860,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (861,0)
+   -> refine_symmetry_element symmetry.c (873,0) (1530>225 [EE:585>562])
+   -> EXTERN: puts symmetry.c (874,0)
+   -> INLINE: destroy_symmetry_element symmetry.c (875,0) (60<=225)
+      -> EXTERN: free symmetry.c (333,0)
+      -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: init_c2_axis
+   -> printf symmetry.c (891,0)
+   -> INLINE: pow2 symmetry.c (896,0) (-30<=337)
+   -> INLINE: pow2 symmetry.c (897,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (899,0)
+   -> llvm.sqrt.f64 symmetry.c (900,0)
+   -> llvm.fabs.f64 symmetry.c (901,0)
+   -> EXTERN: puts symmetry.c (903,0)
+   -> alloc_symmetry_element symmetry.c (906,0) (355>225)
+   -> llvm.sqrt.f64 symmetry.c (912,0)
+   -> llvm.sqrt.f64 symmetry.c (927,0)
+   -> EXTERN: puts symmetry.c (930,0)
+   -> EXTERN: puts symmetry.c (935,0)
+   -> llvm.fabs.f64 symmetry.c (938,0)
+   -> llvm.fabs.f64 symmetry.c (938,0)
+   -> llvm.sqrt.f64 symmetry.c (950,0)
+   -> refine_symmetry_element symmetry.c (959,0) (1640>225 [EE:575>562])
+   -> EXTERN: puts symmetry.c (960,0)
+   -> INLINE: destroy_symmetry_element symmetry.c (961,0) (60<=225)
+      -> EXTERN: free symmetry.c (333,0)
+      -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: init_axis_parameters
+   -> llvm.sqrt.f64 symmetry.c (981,0)
+   -> llvm.sqrt.f64 symmetry.c (981,0)
+   -> llvm.sqrt.f64 symmetry.c (981,0)
+   -> llvm.fabs.f64 symmetry.c (982,0)
+   -> llvm.fabs.f64 symmetry.c (982,0)
+   -> llvm.fabs.f64 symmetry.c (982,0)
+   -> EXTERN: puts symmetry.c (984,0)
+   -> llvm.sqrt.f64 symmetry.c (992,0)
+   -> llvm.sqrt.f64 symmetry.c (993,0)
+   -> llvm.sqrt.f64 symmetry.c (994,0)
+   -> llvm.fabs.f64 symmetry.c (995,0)
+   -> EXTERN: puts symmetry.c (997,0)
+   -> EXTERN: puts symmetry.c (1002,0)
+   -> EXTERN: asin symmetry.c (1006,0)
+   -> printf symmetry.c (1007,0)
+   -> llvm.fabs.f64 symmetry.c (1008,0)
+   -> EXTERN: puts symmetry.c (1010,0)
+   -> llvm.floor.f64 symmetry.c (1013,0)
+   -> printf symmetry.c (1016,0)
+   -> alloc_symmetry_element symmetry.c (1019,0) (355>45 [EE:55>45])
+   -> llvm.sqrt.f64 symmetry.c (1024,0)
+   -> llvm.sqrt.f64 symmetry.c (1056,0)
+   -> printf symmetry.c (1060,0)
+   -> printf symmetry.c (1062,0)
+
+COMPILE FUNC: init_higher_axis
+   -> printf symmetry.c (1074,0)
+   -> init_axis_parameters symmetry.c (1082,0) (1365>225 [EE:580>562])
+   -> EXTERN: puts symmetry.c (1083,0)
+   -> refine_symmetry_element symmetry.c (1087,0) (1640>225 [EE:575>562])
+   -> printf symmetry.c (1088,0)
+   -> INLINE: destroy_symmetry_element symmetry.c (1089,0) (50<=225)
+      -> EXTERN: free symmetry.c (333,0)
+      -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: init_improper_axis
+   -> printf symmetry.c (1141,0)
+   -> llvm.sqrt.f64 symmetry.c (1153,0)
+   -> EXTERN: puts symmetry.c (1156,0)
+   -> init_axis_parameters symmetry.c (1166,0) (1365>225 [EE:580>562])
+   -> EXTERN: puts symmetry.c (1167,0)
+   -> refine_symmetry_element symmetry.c (1171,0) (1640>225 [EE:575>562])
+   -> printf symmetry.c (1172,0)
+   -> INLINE: destroy_symmetry_element symmetry.c (1173,0) (50<=225)
+      -> EXTERN: free symmetry.c (333,0)
+      -> EXTERN: free symmetry.c (334,0)
+
+COMPILE FUNC: find_center_of_something
+   -> printf symmetry.c (1199,0)
+   -> EXTERN: calloc symmetry.c (1201,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (1203,0)
+   -> EXTERN: fwrite symmetry.c (1203,0)
+   -> EXTERN: exit symmetry.c (1204,0)
+   -> INLINE: pow2 symmetry.c (1208,0) (-30<=337)
+
+COMPILE FUNC: find_planes
+   -> init_ultimate_plane symmetry.c (1219,0) (1030>225 [EE:565>562])
+   -> EXTERN: realloc symmetry.c (1223,0)
+   -> EXTERN: perror symmetry.c (1225,0)
+   -> EXTERN: exit symmetry.c (1226,0)
+   -> init_mirror_plane symmetry.c (1234,0) (660>225 [EE:575>562])
+   -> EXTERN: realloc symmetry.c (1236,0)
+   -> EXTERN: perror symmetry.c (1238,0)
+   -> EXTERN: exit symmetry.c (1239,0)
+
+COMPILE FUNC: find_inversion_centers
+   -> init_inversion_center symmetry.c (1252,0) (440>225)
+   -> EXTERN: calloc symmetry.c (1253,0)
+
+COMPILE FUNC: find_infinity_axis
+   -> init_ultimate_axis symmetry.c (1264,0) (735>225 [EE:565>562])
+   -> EXTERN: realloc symmetry.c (1266,0)
+   -> EXTERN: perror symmetry.c (1268,0)
+   -> EXTERN: exit symmetry.c (1269,0)
+
+COMPILE FUNC: find_c2_axes
+   -> EXTERN: calloc symmetry.c (1280,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (1285,0)
+   -> EXTERN: fwrite symmetry.c (1285,0)
+   -> EXTERN: exit symmetry.c (1286,0)
+   -> llvm.fabs.f64 symmetry.c (1292,0)
+   -> INLINE: pow2 symmetry.c (1299,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (1301,0)
+   -> init_c2_axis symmetry.c (1303,0) (1065>225 [EE:565>562])
+   -> EXTERN: realloc symmetry.c (1305,0)
+   -> EXTERN: perror symmetry.c (1307,0)
+   -> EXTERN: exit symmetry.c (1308,0)
+   -> init_c2_axis symmetry.c (1319,0) (1065>225 [EE:565>562])
+   -> EXTERN: realloc symmetry.c (1321,0)
+   -> EXTERN: perror symmetry.c (1323,0)
+   -> EXTERN: exit symmetry.c (1324,0)
+   -> INLINE: pow2 symmetry.c (1334,0) (-30<=337)
+   -> llvm.sqrt.f64 symmetry.c (1335,0)
+   -> llvm.fabs.f64 symmetry.c (1341,0)
+   -> llvm.fabs.f64 symmetry.c (1341,0)
+   -> init_c2_axis symmetry.c (1346,0) (1065>225 [EE:565>562])
+   -> EXTERN: realloc symmetry.c (1348,0)
+   -> EXTERN: perror symmetry.c (1350,0)
+   -> EXTERN: exit symmetry.c (1351,0)
+   -> EXTERN: free symmetry.c (1359,0)
+
+COMPILE FUNC: find_higher_axes
+   -> llvm.fabs.f64 symmetry.c (1372,0)
+   -> llvm.fabs.f64 symmetry.c (1377,0)
+   -> llvm.fabs.f64 symmetry.c (1377,0)
+   -> init_higher_axis symmetry.c (1380,0) (460>225)
+   -> EXTERN: realloc symmetry.c (1382,0)
+   -> EXTERN: perror symmetry.c (1384,0)
+   -> EXTERN: exit symmetry.c (1385,0)
+
+COMPILE FUNC: find_improper_axes
+   -> init_improper_axis symmetry.c (1403,0) (725>225 [EE:580>562])
+   -> EXTERN: realloc symmetry.c (1405,0)
+   -> EXTERN: perror symmetry.c (1407,0)
+   -> EXTERN: exit symmetry.c (1408,0)
+
+COMPILE FUNC: report_planes
+   -> EXTERN: puts symmetry.c (1423,0)
+   -> EXTERN: puts symmetry.c (1426,0)
+   -> printf symmetry.c (1427,0)
+   -> EXTERN: puts symmetry.c (1428,0)
+   -> printf symmetry.c (1430,0)
+   -> printf symmetry.c (1431,0)
+   -> printf symmetry.c (1432,0)
+
+COMPILE FUNC: report_inversion_centers
+   -> EXTERN: puts symmetry.c (1441,0)
+   -> EXTERN: puts symmetry.c (1443,0)
+   -> EXTERN: puts symmetry.c (1444,0)
+   -> printf symmetry.c (1445,0)
+   -> printf symmetry.c (1446,0)
+
+COMPILE FUNC: report_axes
+   -> EXTERN: puts symmetry.c (1459,0)
+   -> EXTERN: puts symmetry.c (1462,0)
+   -> printf symmetry.c (1463,0)
+   -> EXTERN: puts symmetry.c (1464,0)
+   -> printf symmetry.c (1466,0)
+   -> printf symmetry.c (1468,0)
+   -> printf symmetry.c (1469,0)
+   -> printf symmetry.c (1470,0)
+   -> printf symmetry.c (1472,0)
+
+COMPILE FUNC: report_improper_axes
+   -> EXTERN: puts symmetry.c (1486,0)
+   -> EXTERN: puts symmetry.c (1489,0)
+   -> printf symmetry.c (1490,0)
+   -> EXTERN: puts symmetry.c (1491,0)
+   -> printf symmetry.c (1493,0)
+   -> printf symmetry.c (1495,0)
+   -> printf symmetry.c (1496,0)
+   -> printf symmetry.c (1497,0)
+   -> printf symmetry.c (1499,0)
+
+COMPILE FUNC: report_and_reset_counters
+   -> printf symmetry.c (1513,0)
+
+COMPILE FUNC: find_symmetry_elements
+   -> find_center_of_something symmetry.c (1527,0) (465>225)
+   -> EXTERN: puts symmetry.c (1529,0)
+   -> INLINE: find_inversion_centers symmetry.c (1531,0) (65<=225)
+      -> init_inversion_center symmetry.c (1252,0) (440>225)
+      -> EXTERN: calloc symmetry.c (1253,0)
+   -> INLINE: report_and_reset_counters symmetry.c (1533,0) (110<=337)
+      -> printf symmetry.c (1513,0)
+   -> EXTERN: puts symmetry.c (1534,0)
+   -> find_planes symmetry.c (1536,0) (500>225)
+   -> INLINE: report_and_reset_counters symmetry.c (1538,0) (110<=337)
+      -> printf symmetry.c (1513,0)
+   -> EXTERN: puts symmetry.c (1539,0)
+   -> INLINE: find_infinity_axis symmetry.c (1541,0) (185<=225)
+      -> init_ultimate_axis symmetry.c (1264,0) (735>225 [EE:565>562])
+      -> EXTERN: realloc symmetry.c (1266,0)
+      -> EXTERN: perror symmetry.c (1268,0)
+      -> EXTERN: exit symmetry.c (1269,0)
+   -> INLINE: report_and_reset_counters symmetry.c (1543,0) (110<=337)
+      -> printf symmetry.c (1513,0)
+   -> EXTERN: puts symmetry.c (1544,0)
+   -> find_c2_axes symmetry.c (1546,0) (1430>225 [EE:590>562])
+   -> INLINE: report_and_reset_counters symmetry.c (1548,0) (110<=337)
+      -> printf symmetry.c (1513,0)
+   -> EXTERN: puts symmetry.c (1549,0)
+   -> find_higher_axes symmetry.c (1551,0) (475>225)
+   -> INLINE: report_and_reset_counters symmetry.c (1553,0) (110<=337)
+      -> printf symmetry.c (1513,0)
+   -> EXTERN: puts symmetry.c (1554,0)
+   -> find_improper_axes symmetry.c (1556,0) (285>225)
+   -> INLINE: report_and_reset_counters symmetry.c (1558,0) (110<=337)
+      -> printf symmetry.c (1513,0)
+
+COMPILE FUNC: compare_axes
+
+COMPILE FUNC: sort_symmetry_elements
+   -> EXTERN: qsort symmetry.c (1581,0)
+   -> EXTERN: qsort symmetry.c (1584,0)
+   -> EXTERN: qsort symmetry.c (1587,0)
+
+COMPILE FUNC: report_symmetry_elements_verbose
+   -> report_inversion_centers symmetry.c (1594,0) (250>225)
+   -> report_axes symmetry.c (1595,0) (520>225)
+   -> report_improper_axes symmetry.c (1596,0) (520>225)
+   -> report_planes symmetry.c (1597,0) (380>225)
+
+COMPILE FUNC: summarize_symmetry_elements
+   -> EXTERN: calloc symmetry.c (1605,0)
+   -> EXTERN: calloc symmetry.c (1606,0)
+
+COMPILE FUNC: report_symmetry_elements_brief
+   -> EXTERN: calloc symmetry.c (1617,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (1622,0)
+   -> EXTERN: fwrite symmetry.c (1622,0)
+   -> EXTERN: exit symmetry.c (1623,0)
+   -> EXTERN: puts symmetry.c (1628,0)
+   -> printf symmetry.c (1632,0)
+   -> EXTERN: strlen symmetry.c (1633,0)
+   -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (1633,0)
+   -> EXTERN: strlen symmetry.c (1635,0)
+   -> sprintf symmetry.c (1637,0)
+   -> EXTERN: strcat symmetry.c (1638,0)
+   -> sprintf symmetry.c (1641,0)
+   -> EXTERN: strcat symmetry.c (1641,0)
+   -> sprintf symmetry.c (1642,0)
+   -> EXTERN: strcat symmetry.c (1642,0)
+   -> sprintf symmetry.c (1645,0)
+   -> EXTERN: strcat symmetry.c (1645,0)
+   -> sprintf symmetry.c (1646,0)
+   -> EXTERN: strcat symmetry.c (1646,0)
+   -> EXTERN: strlen symmetry.c (1648,0)
+   -> llvm.memcpy.p0i8.p0i8.i64 symmetry.c (1648,0)
+   -> sprintf symmetry.c (1649,0)
+   -> EXTERN: strcat symmetry.c (1649,0)
+   -> EXTERN: puts symmetry.c (1651,0)
+
+COMPILE FUNC: identify_point_group
+   -> EXTERN: strcmp symmetry.c (1664,0)
+   ->  symmetry.c (1665,0)
+   -> printf symmetry.c (1671,0)
+   -> EXTERN: puts symmetry.c (1678,0)
+   -> EXTERN: puts symmetry.c (1681,0)
+   -> EXTERN: puts symmetry.c (1683,0)
+   -> EXTERN: strcmp symmetry.c (1685,0)
+   ->  symmetry.c (1685,0)
+   -> printf symmetry.c (1686,0)
+   -> printf symmetry.c (1691,0)
+
+COMPILE FUNC: identify_point_group1
+   -> EXTERN: strcmp symmetry.c (1703,0)
+   ->  symmetry.c (1704,0)
+   -> printf symmetry.c (1710,0)
+   -> EXTERN: puts symmetry.c (1718,0)
+   -> EXTERN: puts symmetry.c (1722,0)
+   -> EXTERN: puts symmetry.c (1725,0)
+   -> EXTERN: strcmp symmetry.c (1727,0)
+   ->  symmetry.c (1727,0)
+   -> printf symmetry.c (1729,0)
+   -> printf symmetry.c (1735,0)
+   -> EXTERN: strcpy symmetry.c (1737,0)
+
+COMPILE FUNC: read_coordinates
+   -> fscanf symmetry.c (1752,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (1753,0)
+   -> EXTERN: fwrite symmetry.c (1753,0)
+   -> printf symmetry.c (1756,0)
+   -> EXTERN: calloc symmetry.c (1757,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (1759,0)
+   -> EXTERN: fwrite symmetry.c (1759,0)
+   -> fscanf symmetry.c (1763,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (1764,0)
+   -> fprintf symmetry.c (1764,0)
+
+COMPILE FUNC: point_group_calc
+   -> EXTERN: calloc symmetry.c (4544,0)
+   -> EXTERN: __acrt_iob_func symmetry.c (4546,0)
+   -> EXTERN: fwrite symmetry.c (4546,0)
+   -> find_symmetry_elements symmetry.c (4556,0) (1585>225 [EE:585>562])
+   -> INLINE: sort_symmetry_elements symmetry.c (4557,0) (180<=225)
+      -> EXTERN: qsort symmetry.c (1581,0)
+      -> EXTERN: qsort symmetry.c (1584,0)
+      -> EXTERN: qsort symmetry.c (1587,0)
+   -> INLINE: summarize_symmetry_elements symmetry.c (4558,0) (195<=225)
+      -> EXTERN: calloc symmetry.c (1605,0)
+      -> EXTERN: calloc symmetry.c (1606,0)
+   -> EXTERN: puts symmetry.c (4560,0)
+   -> INLINE: rank_symmetric_planes symmetry.c (4563,0) (-14460<=225)
+      -> llvm.abs.i32 symmetry.c (3951,0)
+      -> INLINE: mirror_atom symmetry.c (3956,0) (50<=225)
+      -> llvm.fabs.f64 symmetry.c (3959,0)
+      -> llvm.fabs.f64 symmetry.c (3966,0)
+      -> llvm.abs.i32 symmetry.c (3978,0)
+   -> INLINE: rank_symmetric_axes symmetry.c (4564,0) (-14380<=225)
+      -> llvm.abs.i32 symmetry.c (3999,0)
+      -> rotate_atom symmetry.c (4004,0) (355>225)
+      -> llvm.fabs.f64 symmetry.c (4007,0)
+      -> llvm.fabs.f64 symmetry.c (4016,0)
+      -> rotate_atom symmetry.c (4025,0) (355>225)
+      -> llvm.abs.i32 symmetry.c (4031,0)
+   -> INLINE: rank_symmetric_inversion_centers symmetry.c (4565,0) (-14495<=225)
+      -> llvm.abs.i32 symmetry.c (4099,0)
+      -> INLINE: invert_atom symmetry.c (4104,0) (15<=225)
+      -> llvm.fabs.f64 symmetry.c (4107,0)
+      -> llvm.fabs.f64 symmetry.c (4114,0)
+      -> llvm.abs.i32 symmetry.c (4126,0)
+   -> INLINE: rank_symmetric_improper_axes symmetry.c (4566,0) (-14395<=225)
+      -> llvm.abs.i32 symmetry.c (4049,0)
+      -> rotate_reflect_atom symmetry.c (4054,0) (345>225)
+      -> llvm.fabs.f64 symmetry.c (4057,0)
+      -> llvm.fabs.f64 symmetry.c (4066,0)
+      -> rotate_reflect_atom symmetry.c (4075,0) (345>225)
+      -> llvm.abs.i32 symmetry.c (4081,0)
+   -> INLINE: report_symmetry_elements_verbose symmetry.c (4569,0) (90<=337)
+      -> report_inversion_centers symmetry.c (1594,0) (250>225)
+      -> report_axes symmetry.c (1595,0) (520>225)
+      -> report_improper_axes symmetry.c (1596,0) (520>225)
+      -> report_planes symmetry.c (1597,0) (380>225)
+   -> report_symmetry_elements_brief symmetry.c (4570,0) (1245>225 [EE:565>562])
+   -> identify_point_group1 symmetry.c (4571,0) (615>225 [EE:565>562])
+
+---- End Inlining Report ------
